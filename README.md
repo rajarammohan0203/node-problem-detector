@@ -121,7 +121,7 @@ kubectl port-forward deployment/prometheus-server 9090:9090 -n prometheus
 http://localhost:9090/graph
 ```
 
-![prometheus](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![prometheus](https://gitlab.cloudifyops.com/devops-toolset/clops-node-problem_dector/-/raw/main/images/Screenshot_2022-12-29_060932.jpg)
 
 ## step 4 - install grafana
 
@@ -195,14 +195,20 @@ kubectl get secret --namespace grafana grafana -o jsonpath="{.data.admin-passwor
 
  On opensource grafana dashboard you can find many opensource dashboards which can be imported directly into the Grafana.
   - import a dashboard 6417 (Pods Monitoring Dashboard) and 3119 (Cluster Monitoring Dashboard)
+  - setting -> datasource
+  - save & Test
+  ![grafana](https://gitlab.cloudifyops.com/devops-toolset/clops-node-problem_dector/-/raw/main/images/config_data_source.jpg)
+  ![grafana](https://gitlab.cloudifyops.com/devops-toolset/clops-node-problem_dector/-/raw/main/images/image__1_.png)
 
 9. click Explore 
   - select  metrics -> kube_node_status_condition 
   - Label Filter -> condition 
   - Run the query 
-
+![grafana](https://gitlab.cloudifyops.com/devops-toolset/clops-node-problem_dector/-/raw/main/images/image__1_.png)
 
 10. Add to Dashboard Name it as Node Problem Dector 
+
+  ![grafana-db](https://gitlab.cloudifyops.com/devops-toolset/clops-node-problem_dector/-/raw/main/images/image.png)
   
 
 
