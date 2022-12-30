@@ -62,7 +62,7 @@ The node-problem-detector is daemonset. This tool aims to make various node prob
   ```
  4. Verify helm list
  ```
- helm list
+ helm list -A
  ``` 
  5. verify the pods are running 
 
