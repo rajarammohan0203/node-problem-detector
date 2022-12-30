@@ -58,7 +58,7 @@ The node-problem-detector is daemonset. This tool aims to make various node prob
   ```
  3. To install the chart with the release name 
   ```
-  helm install <release-name> deliveryhero/node-problem-detector
+  helm install <release-name> deliveryhero/node-problem-detector -n <namespace>
   ```
  4. Verify helm list
  ```
