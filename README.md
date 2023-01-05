@@ -252,6 +252,8 @@ During the prometheus setup you might ran into issue where you are trying instal
 - [kubernetes.io](https://kubernetes.io/docs/tasks/debug/debug-cluster/monitor-node-health/)
 - [stackoverflow](https://stackoverflow.com/questions/48134835/how-to-use-k8s-node-problem-detector)
 - [metrics issue](https://github.com/kubernetes/node-problem-detector/issues/259)
+- [video](https://www.youtube.com/watch?v=vC7CG2ONjGM)
+- [jhooq](https://jhooq.com/prometheous-k8s-aws-setup/)
 
 
 
