@@ -240,9 +240,9 @@ kubectl get secret --namespace grafana grafana -o jsonpath="{.data.admin-passwor
 
 ## Error Troubleshooting
 
-During the prometheus setup you might ran into issue where you are trying install the helm prometheus but may lear to following issue -
+During the prometheus setup you might ran into issue where you are trying install the helm prometheus but may learn to following issue -
 
-- pods are pending status (its a an persistentVolume claim)
+- pods are pending status (its an persistentVolume claim)
 - Refer [link](https://docs.aws.amazon.com/eks/latest/userguide/csi-iam-role.html) 
 
 ## Reference link
