@@ -85,12 +85,14 @@ kubectl exec -it <pod name> /bin/bash -n <namespace>
 ```
  curl localhost:20257/metrics
 ```
+![curl](https://gitlab.cloudifyops.com/devops-toolset/clops-node-problem-detector/-/raw/main/images/image__2_.png)
  10. change the values.yml  
 ```
  cd /helm-charts/stable/node-problem-detector/
  vi values.yml
  //change the metrics to true 
 ```
+![metrics](https://gitlab.cloudifyops.com/devops-toolset/clops-node-problem-detector/-/raw/main/images/image__3_.png)
  11. verify the logs 
 ```
  helm upgrade <release name> deliveryhero/node-problem-detector -f values.yaml
