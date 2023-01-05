@@ -93,7 +93,7 @@ kubectl exec -it <pod name> /bin/bash -n <namespace>
  //change the metrics to true 
 ```
 ![metrics](https://gitlab.cloudifyops.com/devops-toolset/clops-node-problem-detector/-/raw/main/images/image__3_.png)
- 11. verify the logs 
+ 11. helm upgrade
 ```
  helm upgrade <release name> deliveryhero/node-problem-detector -f values.yaml
 ```
