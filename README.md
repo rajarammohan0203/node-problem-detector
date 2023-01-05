@@ -226,17 +226,15 @@ kubectl get secret --namespace grafana grafana -o jsonpath="{.data.admin-passwor
   - setting -> datasource
   - save & Test
   ![grafana](https://gitlab.cloudifyops.com/devops-toolset/clops-node-problem_dector/-/raw/main/images/config_data_source.jpg)
-  ![grafana](https://gitlab.cloudifyops.com/devops-toolset/clops-node-problem_dector/-/raw/main/images/image__1_.png)
+  
 
-9. click Explore 
-  - select  metrics -> kube_node_status_condition 
-  - Label Filter -> condition 
-  - Run the query 
-![grafana](https://gitlab.cloudifyops.com/devops-toolset/clops-node-problem_dector/-/raw/main/images/image__1_.png)
+9. import a dashboard 15549 (Node Problem Detector) -> select the prometheus as datasource
+ 
+ Dashboard -> Link[https://grafana.com/grafana/dashboards/15549-node-problem-detector/]
 
 10. Add to Dashboard Name it as Node Problem Dector 
 
-  ![grafana-db](https://gitlab.cloudifyops.com/devops-toolset/clops-node-problem_dector/-/raw/main/images/image.png)
+  ![grafana-db](https://gitlab.cloudifyops.com/devops-toolset/clops-node-problem-detector/-/raw/main/images/npd.jpg)
   
 
 
