@@ -56,23 +56,50 @@ The node-problem-detector is daemonset. This tool aims to make various node prob
    helm repo add deliveryhero https://charts.deliveryhero.io/
  
   ```
- 3. To install the chart with the release name 
+ 3. inside the helam chart directory
+  ```
+  cd /helm-charts/stable/node-problem-detector/
+  ```
+ 4. To install the chart with the release name 
   ```
   helm install <release-name> deliveryhero/node-problem-detector -n <namespace>
   ```
- 4. Verify helm list
+ 5. Verify helm list
  ```
  helm list -A
  ``` 
- 5. verify the pods are running 
+ 6. verify the pods are running 
 
  ```
- kubectl get pods 
+ kubectl get pods -n <namespace> 
  ```
- 6. verify the logs 
+ 7. verify the logs & node problem_dector is started
 ```
-kubectl logs <pod name> 
+kubectl logs <pod name> -n <namespace>
 ```
+ 8. inside the pods 
+```
+kubectl exec -it <pod name> /bin/bash -n <namespace>
+```
+ 9. verify the logs 
+```
+ curl localhost:20257/metrics
+```
+ 10. change the values.yml  
+```
+ cd /helm-charts/stable/node-problem-detector/
+ vi values.yml
+ //change the metrics to true 
+```
+ 11. verify the logs 
+```
+ helm upgrade <release name> deliveryhero/node-problem-detector -f values.yaml
+```
+ 12. verify the revision
+
+ ```
+ helm list -A
+ ```
 
 
 
@@ -136,7 +163,6 @@ helm repo add grafana https://grafana.github.io/helm-charts
 
 ```
 helm repo update 
-
 ```
 3. Now we need to create a Prometheus data source so that Grafana can access the Kubernetes metrics. Create a yaml file prometheus-datasource.yaml and save the following data source configuration into it 
 ```
@@ -225,6 +251,7 @@ During the prometheus setup you might ran into issue where you are trying instal
 - [artifacthub.io](https://artifacthub.io/packages/helm/deliveryhero/node-problem-detector)
 - [kubernetes.io](https://kubernetes.io/docs/tasks/debug/debug-cluster/monitor-node-health/)
 - [stackoverflow](https://stackoverflow.com/questions/48134835/how-to-use-k8s-node-problem-detector)
+- [metrics issue](https://github.com/kubernetes/node-problem-detector/issues/259)
 
 
 
