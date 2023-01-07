@@ -1,4 +1,4 @@
-# CLOPS-Node-Problem-Detector
+# Node-Problem-Detector
 
 The node-problem-detector is daemonset. This tool aims to make various node problems visible to the upstream layers in cluster management stack. It is a daemon which runs on each node, detects node problems and reports them to apiserver.
 
