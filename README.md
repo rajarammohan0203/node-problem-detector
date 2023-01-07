@@ -85,14 +85,14 @@ kubectl exec -it <pod name> /bin/bash -n <namespace>
 ```
  curl localhost:20257/metrics
 ```
-![curl](https://gitlab.cloudifyops.com/devops-toolset/clops-node-problem-detector/-/raw/main/images/image__2_.png)
+![curl](https://github.com/rajarammohan0203/node-problem-detector/blob/main/images/image__2_.png?raw=true)
  10. change the values.yml  
 ```
  cd /helm-charts/stable/node-problem-detector/
  vi values.yml
  //change the metrics to true 
 ```
-![metrics](https://gitlab.cloudifyops.com/devops-toolset/clops-node-problem-detector/-/raw/main/images/image__3_.png)
+![metrics](https://github.com/rajarammohan0203/node-problem-detector/blob/main/images/image__3_.png?raw=true)
  11. helm upgrade
 ```
  helm upgrade <release name> deliveryhero/node-problem-detector -f values.yaml
@@ -150,7 +150,7 @@ kubectl port-forward deployment/prometheus-server 9090:9090 -n prometheus
 http://localhost:9090/graph
 ```
 
-![prometheus](https://gitlab.cloudifyops.com/devops-toolset/clops-node-problem_dector/-/raw/main/images/Screenshot_2022-12-29_060932.jpg)
+![prometheus](https://github.com/rajarammohan0203/node-problem-detector/blob/main/images/Screenshot_2022-12-29_060932.jpg)
 
 ## step 4 - install grafana
 
@@ -225,7 +225,7 @@ kubectl get secret --namespace grafana grafana -o jsonpath="{.data.admin-passwor
   - import a dashboard 6417 (Pods Monitoring Dashboard) and 3119 (Cluster Monitoring Dashboard)
   - setting -> datasource
   - save & Test
-  ![grafana](https://gitlab.cloudifyops.com/devops-toolset/clops-node-problem_dector/-/raw/main/images/config_data_source.jpg)
+  ![grafana](https://github.com/rajarammohan0203/node-problem-detector/blob/main/images/config_data_source.jpg)
   
 
 9. import a dashboard 15549 (Node Problem Detector) -> select the prometheus as datasource
@@ -234,7 +234,7 @@ kubectl get secret --namespace grafana grafana -o jsonpath="{.data.admin-passwor
 
 10. Add to Dashboard Name it as Node Problem Dector 
 
-  ![grafana-db](https://gitlab.cloudifyops.com/devops-toolset/clops-node-problem-detector/-/raw/main/images/npd.jpg)
+  ![grafana-db](https://github.com/rajarammohan0203/node-problem-detector/blob/main/images/npd.jpg)
   
 
 
